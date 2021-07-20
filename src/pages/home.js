@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../components/navbar'
 import SideBar from '../components/sidebar';
-import Step1 from '../components/stepper/step4'
+import Step1 from '../components/stepper/step5'
 export default ()=>{
     return <div className="">
 <Nav/>

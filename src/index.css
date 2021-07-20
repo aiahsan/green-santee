@@ -1,7 +1,7 @@
 body{font-family: 'Raleway', sans-serif; margin: 0;}
 
 h1{font-size: 38px!important; line-height: 40px!important;}
-h2{font-size: 29px!important; line-height: 32ox!important;}
+h2{font-size: 29px!important; line-height: 32px!important;}
 h3{font-size: 23px!important; line-height: 24px!important;}
 h4{font-size: 20px!important; line-height: 24px!important;}
 p{font-size: 21px!important;line-height: 25px!important;}
@@ -35,6 +35,14 @@ padding:35px 0px ;
 {
     border: 3px solid #6CA21F!important;
 color: #6CA21F!important;
+border-radius: 18px!important;
+padding: 8px 20px!important;
+}
+.secondry-btn-dsb
+{
+    background-color:  #B0B0B0!important;
+    border: 3px solid #B0B0B0!important;
+color: #EDEDED!important;
 border-radius: 18px!important;
 padding: 8px 20px!important;
 }
@@ -231,3 +239,96 @@ color:#555555;
 font-size: 17px;
     line-height: 24px;
   }
+  .step-4-item p{
+    margin-top: 16px;
+    max-width: 940px;
+}
+  .step-4-item{
+      display: flex;
+      margin-top: 60px;
+      flex-direction: column;
+  }
+  .step-4-head svg{
+margin-right: 21px;  
+}
+  .step-4-head{
+      display: flex;
+      align-items: center;
+  }
+  .step-5-item p{
+    margin-top: 16px;
+    max-width: 940px;
+    font-size: 17px!important;
+line-height: 24px!important;
+color: #323929!important;
+}
+ 
+  .ml-2{
+      margin-left: 20px;
+  }
+  .stepp-5-text{
+      max-width: 560px!important;
+  }
+
+  .download-btn:focus,.download-btn:active{
+    box-shadow: none!important;
+  }
+  .download-btn p span{
+    color: #6CA21F;
+      
+}
+  .download-btn p{
+    color: #555555;
+    font-size: 17px!important;
+line-height: 24px!important;
+  }
+  .download-btn
+  {
+    padding: 32px 128px!important;
+    margin-top: 16px;
+    border: 3px solid #C2C2C1!important;
+    border-radius: 25px!important;
+    
+  }
+
+  .step-done
+  {
+    background: #f3f7fa;
+    min-height: 100vh;
+    padding-bottom: 128px;
+  }
+  .done-inner h4{
+text-align: center;
+color: #6CA21F;
+padding-bottom: 80px!important;  
+}
+  .done-inner p{
+ color:  #EF6451;
+ margin-top: 24px;
+ text-align: center; 
+}
+.mb-80
+{
+    margin-bottom: 80px;
+}
+.mt-40
+{
+    margin-top: 40px;
+}
+  .done-innertext-cst{
+    max-width: 791px!important;
+    margin: auto!important;
+    margin-top: 24px!important;  
+}
+  .done-inner-top{
+  }
+  .done-inner{
+      max-width: 1068px;
+      width: 100%;
+      background-color: #FFFFFF;
+    margin: auto;
+    border-radius: 40px;
+    padding-top: 88px;
+    margin-top: 128px;
+
+    }
