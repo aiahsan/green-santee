@@ -1,0 +1,233 @@
+body{font-family: 'Raleway', sans-serif; margin: 0;}
+
+h1{font-size: 38px!important; line-height: 40px!important;}
+h2{font-size: 29px!important; line-height: 32ox!important;}
+h3{font-size: 23px!important; line-height: 24px!important;}
+h4{font-size: 20px!important; line-height: 24px!important;}
+p{font-size: 21px!important;line-height: 25px!important;}
+h5{font-size: 40px!important; line-height: 1.25!important;}
+
+
+h1,h2,h3,h4,h5,p{
+    margin-bottom: 0px!important;
+}
+button{
+    font-family: Raleway;
+font-weight: bold;
+font-size: 20px;
+line-height: 24px;
+}
+img{max-width: 100%;height: auto;}
+.navcst{
+    background: #FFFFFF;
+box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.05);
+padding:35px 0px ;
+}
+.brd-radio{
+    border: 2px solid #6CA21F!important;
+
+}
+.crs-pntr
+{
+    cursor: pointer;
+}
+.secondry-btn
+{
+    border: 3px solid #6CA21F!important;
+color: #6CA21F!important;
+border-radius: 18px!important;
+padding: 8px 20px!important;
+}
+.primary-btn
+{
+    border: 3px solid #6CA21F!important;
+
+    background-color:  #6CA21F!important;
+color: white!important;
+border-radius: 18px!important;
+padding: 8px 20px!important;
+}
+.nav-btn-flex{
+    max-width: 322px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sidebar{
+    background-color: #687C8C;
+    min-width: 630px;
+    height: calc(100vh - 117px);
+    /* height: 100%; */
+    padding: 80px 115px 0px 115px;
+    
+}
+.sidebar .bar-item p{
+    margin-left: 12px;
+    font-size: 21px; line-height: 26px;
+color: #EDEDED;
+}
+
+.sidebar .bar-item .active{
+    font-weight: 700;
+    color: white;
+}
+.sidebar .bar-item
+{
+display: flex;
+align-items: center;
+cursor: pointer;
+margin-top: 16px;
+}
+.px{
+    margin-left: 4px!important;
+}
+.mrt-15
+{
+    margin-top: 15px;
+}
+
+.stepper p{
+max-width: 454px;
+}
+.stepper h1{
+color: #203404;
+text-transform: uppercase;
+}
+.stepper{
+    margin: 80px 150px;
+    box-sizing: content-box;
+    max-width: 870px;
+    width: 100%;
+}
+.green-textbox{
+padding: 0px 28px;
+/* min-width: 423px; */
+border: 2px solid #C2C2C1;
+border-radius: 24px;
+width: 100%;
+}
+.green-textbox label{
+    position: relative;
+    top: -13px;
+    background-color: white;
+    padding: 0px 11px;
+    font-size: 17px;
+line-height: 24px;
+color: #555555;
+}
+.green-textbox input:active,.green-textbox input:focus{
+    box-shadow: none;
+}
+.green-textbox input,.green-textbox select{
+background-color: white;
+border: none;
+padding: 0px;
+height: 33px;
+margin:0px 0px 19px 0px;
+width: 100%;
+font-style: italic;
+
+font-size: 21px;
+line-height: 26px;
+color: #323929;
+}
+.mt-48
+{
+    margin-top: 48px;
+}
+.mr-2{
+    margin-right: 10px;
+
+}
+.mr-4{
+    margin-right: 20px;
+}
+.text-input-cst{
+    max-width: 423px;
+    width: 100%;
+}
+.text-postal{
+    max-width: 204px;
+    width: 100%;
+
+}
+.text-postal1{
+    max-width: 216px;
+    width: 100%;
+
+}
+.text-postal2{
+    max-width: 326px;
+    width: 100%;
+
+}
+.text-address{
+    max-width: 646px;
+    width: 100%;
+}
+.nxt-btn
+{
+    justify-content: flex-end;
+    display: flex;
+    margin-right: -115px;
+    margin-top: 15%;
+}
+.nxt-btn1
+{
+    justify-content: space-between;
+    display: flex;
+    margin-right: -115px;
+    margin-top: 8%;
+}
+.cms1 h4{
+font-style: italic;
+}
+.cms1 svg{
+margin-right: 10px;
+}
+.cms1{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -11px;
+}
+.cms{
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 2px solid #C2C2C1;
+    height: 34px;
+    position: relative;
+}
+.brd-btm{
+    width: 100%;
+    height: 2px;
+    background-color: #C4C4C4;
+    margin: 30px 0px;
+}
+.btnback{
+    font-size: 20px;
+line-height: 24px;
+color:  #6CA21F!important;
+
+}
+
+::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+  }
+
+  .mt-15p
+  {
+      margin-top: 15%;
+  }
+  .step-3p
+  {
+    max-width: 503px;
+    margin-top: 16px;
+  }
+  .step-3-italic p{
+    font-style: italic;
+color:#555555;
+font-size: 17px;
+    line-height: 24px;
+  }
