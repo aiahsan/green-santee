@@ -1,8 +1,11 @@
 import React from 'react';
 import Icon from '../components/icons';
 import Nav from '../components/navbar'
+import {useHistory} from 'react-router-dom'
 
 export default ()=>{
+    const history=useHistory();
+
     return <div className="step-done">
 <Nav/>
 
@@ -18,7 +21,7 @@ export default ()=>{
  Une fois la demande obtenu, les informations vous seront envoyé sur l’adresse mail de l’assuré.</p>
 <p>Nous restons à tout moment disponibles !</p>
 
-<h4 className="mt-40 mb-80">
+<h4 onClick={()=> history.replace('/')} style={{cursor:'pointer'}} className="mt-40 mb-80">
 Retourner sur Green Santé
 </h4>
 </div>

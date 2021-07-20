@@ -4,7 +4,7 @@ import Radio from '../radio';
 import Select from '../select';
 import Icon from '../icons'
 import Check from '../checkbox2';
-export default () => {
+export default  ({handleStep}) => {
     const [checked,setchecked]=React.useState(false);
     return <div className="stepper">
         <h1>Les conditions</h1>
@@ -62,10 +62,10 @@ export default () => {
 
         <div className="nxt-btn1">
 
-            <button className="btn btnback">
+            <button onClick={()=>handleStep(0)} className="btn btnback">
                 <span className="mr-2"> <Icon name="chevleft" /></span>
                 Retour</button>
-            <button className={`btn ${checked==true?"secondry-btn":"secondry-btn-dsb"}`}>Continuer vers les conditions</button>
+            <button onClick={()=>checked==true?handleStep(1):null} className={`btn ${checked==true?"secondry-btn":"secondry-btn-dsb"}`}>Continuer vers les conditions</button>
         </div>
     </div>
 }

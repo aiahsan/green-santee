@@ -4,7 +4,7 @@ import Radio from '../radio';
 import Select from '../select';
 import Icon from '../icons'
 import Check from '../checkbox2';
-export default () => {
+export default  ({handleStep}) => {
     const [checked,setchecked]=React.useState(false);
     return <div className="stepper">
         <h1>Mandat de prélèvement SEPA</h1>
@@ -16,7 +16,7 @@ export default () => {
         <div className="d-flex mt-48">
             <div className="w-100 mr-4"><Textbox label="Code international d’identification de votre banque - BIC" value="CMCIFRKK" /> </div>
         </div>
-        <div className="d-flex mt-48">
+        <div className="flex-broke mt-48">
             <div className="w-100 mr-4"><Textbox label="Créancier" value="Henner-GMC / FR56AAA414162" /> </div>
             <div className="w-100 mr-4"><Textbox label="Débiteur" value="Veritronic" /> </div>
         </div>
@@ -40,10 +40,10 @@ export default () => {
 
         <div className="nxt-btn1">
 
-            <button className="btn btnback">
+            <button  onClick={()=>handleStep(0)} className="btn btnback">
                 <span className="mr-2"> <Icon name="chevleft" /></span>
                 Retour</button>
-            <button className={`btn ${checked==true?"secondry-btn":"secondry-btn-dsb"}`}>Continuer vers les conditions</button>
+            <button  onClick={()=>checked==true?handleStep(1):null} className={`btn ${checked==true?"secondry-btn":"secondry-btn-dsb"}`}>Continuer vers les conditions</button>
         </div>
     </div>
 }

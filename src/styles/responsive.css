@@ -1,0 +1,97 @@
+@media screen and (max-width:1612px) { 
+    .green-textbox{
+
+    }
+    h1{font-size: 34px!important; line-height: 35px!important;}
+    h2{font-size: 24px!important; line-height: 27px!important;}
+    h3{font-size: 18px!important; line-height: 19px!important;}
+    h4{font-size: 16px!important; line-height: 19px!important;}
+    p{font-size: 18px!important;line-height: 19px!important;}
+    h5{font-size: 40px!important; line-height: 1.25!important;}
+    .nxt-btn1,.nxt-btn{
+        margin-right: 0px;
+    }
+    .stepper {
+        margin: 80px 60px
+    }
+  .sidebar {
+        padding: 80px 25px 0px 25px;
+        min-width: 431px;
+    }
+    .sidebar img{
+        max-width: 250px;
+        margin: auto;
+    }
+    .bar-item svg
+    {
+        width: 24px;
+        height: 24px;
+    }
+}
+@media screen and (min-width:1440px) { 
+    h1{font-size: 38px!important; line-height: 40px!important;}
+    h2{font-size: 29px!important; line-height: 32px!important;}
+    h3{font-size: 23px!important; line-height: 24px!important;}
+    h4{font-size: 20px!important; line-height: 24px!important;}
+    p{font-size: 21px!important;line-height: 25px!important;}
+    h5{font-size: 40px!important; line-height: 1.25!important;}
+    
+}
+@media screen and (max-width:1240px)  and (min-width: 901px){ 
+    .no-break{
+        flex-direction: column;
+    }
+    .text-postal2{
+        max-width: 100%;
+    }
+    .mr-4{
+        margin-right: 0px;
+    }
+    .flex-broke div,.no-break,.green-textbox{
+    min-width: 100%!important;
+    margin-top: 10px;
+    }
+    .flex-broke{
+        flex-direction: column;
+    }
+   
+}
+@media screen and (max-width:901px) {
+    .sidebar,.nav-btn-flex{
+        display: none;
+    }
+} 
+
+@media screen and (max-width:539px) {
+    .stepper {
+        margin: 30px !important
+    }
+    .no-break{
+        flex-direction: column;
+    }
+    .text-postal2{
+        max-width: 100%;
+    }
+    .mr-4{
+        margin-right: 0px;
+    }
+    .flex-broke div,.no-break,.green-textbox{
+    min-width: 100%!important;
+    margin-top: 10px;
+    }
+        .flex-broke{
+            flex-direction: column;
+        }
+        .secondry-btn{
+                padding:8px 0px!important;
+        }
+        .nxt-btn1{
+            flex-direction: column;
+        }
+}
+@media screen and (max-width:425px) {
+    .download-btn {
+        padding: 12px 32px!important;
+    }
+    
+}
