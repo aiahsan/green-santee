@@ -5,6 +5,21 @@ body{font-family: 'Raleway', sans-serif; margin: 0;}
 h1,h2,h3,h4,h5,p{
     margin-bottom: 0px!important;
 }
+.overlay{
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    transition: ease-in-out .5s;
+
+}
 button{
     font-family: Raleway;
 font-weight: bold;
@@ -58,7 +73,23 @@ padding: 8px 20px!important;
     justify-content: space-between;
     width: 100%;
 }
+.sidebar-overlay{
+max-width: 450px;
+background-color: hsl(0, 0%, 15%)!important;
 
+}
+.dsp-none
+{
+    display: none;
+}
+.nav-toggle{
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+.logo{
+    cursor: pointer;
+}
 .sidebar{
     background-color: #687C8C;
     min-width: 630px;

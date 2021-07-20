@@ -2,12 +2,15 @@ import React from 'react';
 import Icon from '../components/icons';
 import Nav from '../components/navbar'
 import {useHistory} from 'react-router-dom'
+import SideBar from '../components/sidebar';
 
 export default ()=>{
     const history=useHistory();
+    const [shownav,setshownav]=React.useState(false);
 
     return <div className="step-done">
-<Nav/>
+<Nav  shownav={shownav} setshownav={setshownav} variant={true}/>
+<SideBar variant={true} shownav={shownav} setshownav={setshownav} stepcount={0}/>
 
 <div className="done-inner ">
     <div className="d-flex flex-column align-items-center mb-40">

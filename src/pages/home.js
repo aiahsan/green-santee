@@ -6,6 +6,8 @@ import {useHistory} from 'react-router-dom'
 export default ()=>{
     const history=useHistory();
     const [stepcount,setstepcount]=React.useState(1);
+    const [shownav,setshownav]=React.useState(false);
+
     const handleStep=(type)=>
     {
         if(type==1)
@@ -26,10 +28,10 @@ export default ()=>{
         }
     })
     return <div className="">
-<Nav/>
+<Nav shownav={shownav} setshownav={setshownav}/>
 <div className="d-flex">
-    <SideBar stepcount={stepcount}/>
-    <Stepper stepcount={stepcount} handleStep={handleStep} />
+    <SideBar shownav={shownav} setshownav={setshownav} stepcount={stepcount}/>
+    <Stepper  stepcount={stepcount} handleStep={handleStep} />
 </div>
     </div>
 }

@@ -20,7 +20,7 @@ export default  ({handleStep})=>{
         <div className="mr-4 w-100"><Textbox label="Adresse Mail" value="thomas@green-sante.fr" /> </div>
 
         </div>
-        <div className="flex-broke mt-4">
+        <div className="d-flex no-break mt-4">
 
         <div className="mr-4 text-postal2"><Textboxnumber label="Fonction" value="Président" /> </div>
         <div className="text-postal2"><Textboxnumber label="Adresse Mail" value="thomas@green-sante.fr" /> </div>

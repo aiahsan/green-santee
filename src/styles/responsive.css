@@ -57,9 +57,12 @@
    
 }
 @media screen and (max-width:901px) {
-    .sidebar,.nav-btn-flex{
+    .sidebar-hide{
         display: none;
     }
+    .nav-toggle{
+        display: inline-block;
+      }
 } 
 
 @media screen and (max-width:539px) {
@@ -83,15 +86,32 @@
             flex-direction: column;
         }
         .secondry-btn{
-                padding:8px 0px!important;
+                padding:8px 15px!important;
         }
         .nxt-btn1{
             flex-direction: column;
         }
 }
+@media screen and (max-width:375px) {
+.logo svg{
+
+    width: 235px;
+}
+}
+@media screen and (max-width:320px) {
+.nav-btn-flex button{
+margin-bottom: 10px;
+}
+.nav-btn-flex{
+    flex-direction: column;
+}
+}
 @media screen and (max-width:425px) {
     .download-btn {
         padding: 12px 32px!important;
+    }
+    .sidebar{
+        min-width: 100%!important;
     }
     
 }
