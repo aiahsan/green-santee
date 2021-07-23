@@ -6,13 +6,16 @@ import { useHistory } from 'react-router-dom';
 export default () => {
   const history = useHistory();
   const [stepcount, setstepcount] = React.useState(1);
+  const [stepcount1, setstepcount1] = React.useState(1);
   const [shownav, setshownav] = React.useState(false);
 
   const handleStep = (type) => {
     if (type == 1) {
       setstepcount(stepcount + 1);
+      setstepcount1(stepcount1 + 1);
     } else {
       setstepcount(stepcount - 1);
+      setstepcount1(stepcount1 - 1);
     }
   };
 
@@ -29,6 +32,7 @@ export default () => {
           shownav={shownav}
           setshownav={setshownav}
           stepcount={stepcount}
+          stepcount1={stepcount1}
         />
         <Stepper stepcount={stepcount} handleStep={handleStep} />
       </div>

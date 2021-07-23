@@ -8,11 +8,8 @@ export default ({ handleStep }) => {
   const [checked, setchecked] = React.useState(false);
   return (
     <div className='stepper'>
-      <h1>Les conditions</h1>
-      <p className='mt-3'>
-        La date d’effet du contrat ne peut pas être antérieur au mois de
-        réalisation du devis.
-      </p>
+      <h1 className='color-cst-1'>Les conditions</h1>
+
       <div className=''>
         <div className='step-4-item'>
           <div className='step-4-head'>
@@ -35,7 +32,7 @@ export default ({ handleStep }) => {
         </div>
       </div>
 
-      <div className='pt-5'>
+      <div className=''>
         <div className='step-4-item'>
           <div className='step-4-head'>
             <Icon name='voter' />
@@ -78,11 +75,13 @@ export default ({ handleStep }) => {
             </p>
           </div>
         </div>
-        <Check
-          checked={checked}
-          setchecked={setchecked}
-          title='J’accepte les conditions de la déclaration'
-        />
+        <div className='mtn-4'>
+          <Check
+            checked={checked}
+            setchecked={setchecked}
+            title='J’accepte les conditions de la déclaration'
+          />
+        </div>
       </div>
       <div className=''>
         <div className='step-4-item'>
@@ -114,7 +113,7 @@ export default ({ handleStep }) => {
             checked == true ? 'secondry-btn' : 'secondry-btn-dsb'
           }`}
         >
-          Continuer vers les conditions
+          Continuer vers le prélèvement SEPA
         </button>
       </div>
     </div>

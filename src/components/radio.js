@@ -1,10 +1,10 @@
 import React from 'react';
 import Icon from './icons';
-export default ({ label, value }) => {
-  const [ischecked, setischecked] = React.useState(false);
+export default ({ label, value, onClick, ischecked }) => {
+  // const [ischecked, setischecked] = React.useState(false);
   return (
     <div
-      onClick={() => setischecked(!ischecked)}
+      onClick={onClick}
       className={`green-textbox crs-pntr ${
         ischecked == true ? 'brd-radio' : ''
       }`}

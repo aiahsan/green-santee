@@ -30,7 +30,9 @@ const InnerBox = ({ stepcount }) => {
         ischecked={stepcount >= 6 ? true : false}
         isactive={stepcount == 5 ? true : false}
       />
-      <img className='mrt-15' src='/images/ap.png' />
+      <div className='d-flex'>
+        <img className='mrt-15' src='/images/ap.png' />
+      </div>
     </div>
   );
 };

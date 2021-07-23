@@ -36,12 +36,12 @@ export default ({ handleStep }) => {
           <Textbox label='Effectif du collège' value='16 personnes' />
         </div>
         <div className='text-postal1'>
-          <Select label='Code Postal' value='35 - 40 ans' />
+          <Select label='Moynn d’âg' value='35 - 40 ans' />
         </div>
       </div>
       <div className='flex-broke mt-4'>
         <div className='w-100'>
-          <Select label='Code Postal' value='35 - 40 ans' />
+          <Select label='' value='35 - 40 ans' />
         </div>
       </div>
       <div className='nxt-btn'>

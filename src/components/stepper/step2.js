@@ -7,7 +7,7 @@ export default ({ handleStep }) => {
   return (
     <div className='stepper'>
       <h1>Correspondant de l’entreprise</h1>
-      <p className='mt-3'>
+      <p className='mt-5'>
         Les informations ci-dessous nous permettront de vous contacter en cas de
         besoin.
       </p>
@@ -33,10 +33,16 @@ export default ({ handleStep }) => {
       </div>
       <div className='d-flex no-break mt-4'>
         <div className='mr-4 text-postal2'>
-          <Textboxnumber label='Fonction' value='Président' />
+          <Textboxnumber
+            label='Numéro de téléphone fix'
+            value='+33 3 12 13 14 15'
+          />
         </div>
         <div className='text-postal2'>
-          <Textboxnumber label='Adresse Mail' value='thomas@green-sante.fr' />
+          <Textboxnumber
+            label='Numéro de téléphone portable'
+            value='+33 6 12 13 14 15'
+          />
         </div>
       </div>
       <div className='brd-btm'></div>
@@ -69,7 +75,7 @@ export default ({ handleStep }) => {
           Retour
         </button>
         <button onClick={() => handleStep(1)} className='btn secondry-btn'>
-          Continuer vers la correspondance de l’entreprise
+          Continuer vers la santé
         </button>
       </div>
     </div>

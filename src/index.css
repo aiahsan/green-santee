@@ -10,6 +10,7 @@ h4,
 h5,
 p {
   margin-bottom: 0px !important;
+  color: #727929;
 }
 .overlay {
   position: fixed; /* Sit on top of the page content */
@@ -96,7 +97,7 @@ img {
   min-width: 630px;
   /* height: calc(100vh - 117px); */
   /* height: 100%; */
-  padding: 80px 115px 0px 115px;
+  padding: 45px 115px 0px 115px;
   min-height: 100vh;
 }
 .sidebar .bar-item p {
@@ -128,7 +129,6 @@ img {
 }
 .stepper h1 {
   color: #203404;
-  text-transform: uppercase;
 }
 .stepper {
   margin: 80px 150px;
@@ -171,7 +171,7 @@ img {
   color: #323929;
 }
 .mt-48 {
-  margin-top: 48px;
+  margin-top: 38px;
 }
 .mr-2 {
   margin-right: 10px;
@@ -236,10 +236,15 @@ img {
   background-color: #c4c4c4;
   margin: 30px 0px;
 }
+.btnback :active,
+.btnback :focus {
+  box-shadow: none !important;
+}
 .btnback {
   font-size: 20px;
   line-height: 24px;
   color: #6ca21f !important;
+  padding: 0px !important;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -265,7 +270,7 @@ img {
 }
 .step-4-item {
   display: flex;
-  margin-top: 60px;
+  margin-top: 50px;
   flex-direction: column;
 }
 .step-4-head svg {
@@ -303,7 +308,7 @@ img {
   line-height: 24px !important;
 }
 .download-btn {
-  padding: 32px 128px !important;
+  padding: 22px 128px !important;
   margin-top: 16px;
   border: 3px solid #c2c2c1 !important;
   border-radius: 25px !important;
@@ -312,7 +317,7 @@ img {
 .step-done {
   background: #f3f7fa;
   min-height: 100vh;
-  padding-bottom: 128px;
+  padding-bottom: 75px;
 }
 .done-inner h4 {
   text-align: center;
@@ -344,9 +349,55 @@ img {
   margin: auto;
   border-radius: 40px;
   padding-top: 88px;
-  margin-top: 128px;
+  margin-top: 75px;
 }
 
 .flex-broke {
   display: flex;
+}
+
+.file-upload-cst {
+  display: none;
+}
+.bar-item {
+  cursor: pointer;
+}
+
+.mtn-4 {
+  margin-top: -10px;
+}
+
+.color-cst-1 {
+  color: #323929 !important;
+}
+
+.cms1 h4 {
+  font-weight: 700;
+}
+
+.font-p2 {
+  font-style: italic;
+  color: #555555;
+  font-size: 17px !important;
+  line-height: 24px !important;
+}
+
+.btn {
+  font-weight: 700 !important;
+}
+
+.secondry-btn:focus,
+.secondry-btn:active,
+.primary-btn:focus,
+.primary-btn:active {
+  box-shadow: none !important;
+}
+
+.secondry-btn:hover {
+  background-color: #6ca21f !important;
+  color: white !important;
+}
+.primary-btn:hover {
+  color: #6ca21f !important;
+  background-color: white !important;
 }

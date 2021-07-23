@@ -37,7 +37,7 @@ export default ({ handleStep }) => {
         <div className='w-100 mr-4'>
           <Textbox label='Créancier' value='Henner-GMC / FR56AAA414162' />
         </div>
-        <div className='w-100 mr-4'>
+        <div className='text-postal2 mr-4'>
           <Textbox label='Débiteur' value='Veritronic' />
         </div>
       </div>
@@ -45,12 +45,14 @@ export default ({ handleStep }) => {
       <h4 className='mt-5 pt-3'>
         Merci de joindre au présent document un Relevé d’Identité Bancaire.
       </h4>
-      <button className='download-btn btn'>
+      <label className='download-btn btn'>
+        <input type='file' className='file-upload-cst' />
+
         <p>Faites glisser le fichier XXX ici</p>
         <p>
           ou <span>parcourez votre ordinateur </span>
         </p>
-      </button>
+      </label>
       <div className='mt-5 brd-btm'></div>
 
       <div className='mt-4 step-5-item'>
@@ -75,7 +77,7 @@ export default ({ handleStep }) => {
       <Check
         checked={checked}
         setchecked={setchecked}
-        title='J’accepte les conditions de la déclaration'
+        title='J’autorise les conditions du gestionnaire Henner'
       />
 
       <div className='nxt-btn1'>
@@ -91,7 +93,7 @@ export default ({ handleStep }) => {
             checked == true ? 'secondry-btn' : 'secondry-btn-dsb'
           }`}
         >
-          Continuer vers les conditions
+          Je confirme mon adhésion
         </button>
       </div>
     </div>
