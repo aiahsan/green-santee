@@ -77,9 +77,12 @@ img {
   justify-content: space-between;
   width: 100%;
 }
+.d-spnone {
+  display: flex;
+}
 .sidebar-overlay {
   max-width: 450px;
-  background-color: hsl(0, 0%, 15%) !important;
+  background-color: #687c8c !important;
 }
 .dsp-none {
   display: none;
@@ -433,7 +436,8 @@ img {
 }
 
 .dropdown-toggle svg {
-  margin-left: 64px;
+  position: relative;
+  top: -8px;
 }
 .dropdown-toggle {
   justify-content: space-between !important;

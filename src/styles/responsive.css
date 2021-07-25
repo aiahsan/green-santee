@@ -126,7 +126,13 @@
     padding: 8px 15px !important;
   }
   .nxt-btn1 {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .d-spnone {
+    display: none !important;
+  }
+  .nav-btn-flex {
+    flex-direction: row-reverse;
   }
 }
 @media screen and (max-width: 375px) {

@@ -40,7 +40,7 @@ const InnerBox = ({
         isactive={activepage == 5 ? true : false}
         onClick={() => handlePageChange(5)}
       />
-      <div className='d-flex'>
+      <div className='d-spnone'>
         <img className='mrt-15' src='/images/ap.png' />
       </div>
     </div>
@@ -55,8 +55,36 @@ export default ({
   activepage,
   completedPage,
 }) => {
+  const [touchStart, setTouchStart] = React.useState(0);
+  const [touchEnd, setTouchEnd] = React.useState(0);
+
+  function handleTouchStart(e) {
+    setTouchStart(e.targetTouches[0].clientX);
+  }
+
+  function handleTouchMove(e) {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }
+
+  function handleTouchEnd() {
+    if (touchStart - touchEnd > 150) {
+      // do your stuff here for left swipe
+    }
+
+    if (touchStart - touchEnd < -150) {
+      // do your stuff here for right swipe
+      setshownav(false);
+    }
+    setTouchStart(0);
+    setTouchEnd(0);
+  }
   return shownav == true ? (
-    <div className='overlay'>
+    <div
+      className='overlay'
+      handleTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className='sidebar sidebar-overlay'>
         <div
           className='d-flex justify-content-end mb-3'
@@ -64,12 +92,22 @@ export default ({
         >
           <Icon name='cross' />
         </div>
-        <div className='nav-btn-flex mb-3'>
-          <button className='btn secondry-btn'>Se connecter</button>
-          <button className='btn primary-btn'>Nous contacter</button>
-        </div>
+
         <div>
-          {variant && true ? <></> : <InnerBox stepcount={stepcount} />}
+          {variant && true ? (
+            <></>
+          ) : (
+            <InnerBox
+              handlePageChange={handlePageChange}
+              activepage={activepage}
+              stepcount={stepcount}
+              completedPage={completedPage}
+            />
+          )}
+          <div className='nav-btn-flex mb-3 mt-5'>
+            <button className='btn secondry-btn'>Se connecter</button>
+            <button className='btn primary-btn'>Nous contacter</button>
+          </div>
         </div>
       </div>
     </div>

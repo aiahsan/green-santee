@@ -25,7 +25,11 @@ export default ({ label, value, type }) => {
             onClick={() => setclicked(true)}
           >
             <Dropdown.Toggle>
-              <span>Date d’effet du contrat</span> <Icon name='cal' />
+              <span>Date d’effet du contrat</span>
+              <div>
+                {' '}
+                <Icon name='cal' />
+              </div>
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
