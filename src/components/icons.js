@@ -391,6 +391,46 @@ export default ({ name }) => {
         </svg>
       );
 
+    case 'cal': {
+      return (
+        <svg
+          width='30'
+          height='30'
+          viewBox='0 0 30 30'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            d='M22.9998 4.3335H6.99984C4.05432 4.3335 1.6665 6.72131 1.6665 9.66683V23.0002C1.6665 25.9457 4.05432 28.3335 6.99984 28.3335H22.9998C25.9454 28.3335 28.3332 25.9457 28.3332 23.0002V9.66683C28.3332 6.72131 25.9454 4.3335 22.9998 4.3335Z'
+            stroke='#555555'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+          />
+          <path
+            d='M9.6665 1.66675V7.00008'
+            stroke='#555555'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+          />
+          <path
+            d='M20.333 1.66675V7.00008'
+            stroke='#555555'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+          />
+          <path
+            d='M1.6665 12.3335H28.3332'
+            stroke='#555555'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+          />
+        </svg>
+      );
+    }
     case 'cross':
       return (
         <svg

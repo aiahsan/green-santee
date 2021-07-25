@@ -4,6 +4,10 @@ import Textboxnumber from '../textboxnumber';
 import Select from '../select';
 import Icon from '../icons';
 export default ({ handleStep }) => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='stepper'>
       <h1>Correspondant de l’entreprise</h1>

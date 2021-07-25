@@ -7,6 +7,9 @@ import SideBar from '../components/sidebar';
 export default () => {
   const history = useHistory();
   const [shownav, setshownav] = React.useState(false);
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className='step-done'>

@@ -5,6 +5,10 @@ import Select from '../select';
 import Icon from '../icons';
 import Check from '../checkbox2';
 export default ({ handleStep }) => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [checked, setchecked] = React.useState(false);
   return (
     <div className='stepper'>

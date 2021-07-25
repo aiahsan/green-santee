@@ -2,6 +2,10 @@ import React from 'react';
 import Textbox from '../textbox';
 import Select from '../select';
 export default ({ handleStep }) => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='stepper'>
       <h1>Entreprise à assurer</h1>

@@ -4,6 +4,10 @@ import Radio from '../radio';
 import Select from '../select';
 import Icon from '../icons';
 export default ({ handleStep }) => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleRadio = (i) => {
     const newR = radios.map((x) => false);
     newR[i] = true;

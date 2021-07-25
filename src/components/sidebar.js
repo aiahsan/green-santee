@@ -2,33 +2,43 @@ import React from 'react';
 import Checkbox from './checkbox';
 import Icon from './icons';
 
-const InnerBox = ({ stepcount }) => {
+const InnerBox = ({
+  stepcount,
+  handlePageChange,
+  activepage,
+  completedPage,
+}) => {
   return (
     <div>
       <Checkbox
         title='Entreprise à assurer'
-        ischecked={stepcount >= 2 ? true : false}
-        isactive={stepcount == 1 ? true : false}
+        ischecked={completedPage.includes(1) ? true : false}
+        isactive={activepage == 1 ? true : false}
+        onClick={() => handlePageChange(1)}
       />
       <Checkbox
         title='Correspondant de l’entreprise'
-        ischecked={stepcount >= 3 ? true : false}
-        isactive={stepcount == 2 ? true : false}
+        ischecked={completedPage.includes(2) ? true : false}
+        isactive={activepage == 2 ? true : false}
+        onClick={() => handlePageChange(2)}
       />
       <Checkbox
         title='La santé'
-        ischecked={stepcount >= 4 ? true : false}
-        isactive={stepcount == 3 ? true : false}
+        ischecked={completedPage.includes(3) ? true : false}
+        isactive={activepage == 3 ? true : false}
+        onClick={() => handlePageChange(3)}
       />
       <Checkbox
         title='Les conditions'
-        ischecked={stepcount >= 5 ? true : false}
-        isactive={stepcount == 4 ? true : false}
+        ischecked={completedPage.includes(4) ? true : false}
+        isactive={activepage == 4 ? true : false}
+        onClick={() => handlePageChange(4)}
       />
       <Checkbox
         title='Mandat de prélèvement SEPA'
-        ischecked={stepcount >= 6 ? true : false}
-        isactive={stepcount == 5 ? true : false}
+        ischecked={completedPage.includes(5) ? true : false}
+        isactive={activepage == 5 ? true : false}
+        onClick={() => handlePageChange(5)}
       />
       <div className='d-flex'>
         <img className='mrt-15' src='/images/ap.png' />
@@ -36,7 +46,15 @@ const InnerBox = ({ stepcount }) => {
     </div>
   );
 };
-export default ({ stepcount, setshownav, shownav, variant }) => {
+export default ({
+  stepcount,
+  setshownav,
+  shownav,
+  variant,
+  handlePageChange,
+  activepage,
+  completedPage,
+}) => {
   return shownav == true ? (
     <div className='overlay'>
       <div className='sidebar sidebar-overlay'>
@@ -60,7 +78,12 @@ export default ({ stepcount, setshownav, shownav, variant }) => {
   ) : (
     <div className='sidebar sidebar-hide'>
       <div>
-        <InnerBox stepcount={stepcount} />
+        <InnerBox
+          handlePageChange={handlePageChange}
+          activepage={activepage}
+          stepcount={stepcount}
+          completedPage={completedPage}
+        />
       </div>
     </div>
   );

@@ -6,16 +6,21 @@ import { useHistory } from 'react-router-dom';
 export default () => {
   const history = useHistory();
   const [stepcount, setstepcount] = React.useState(1);
-  const [stepcount1, setstepcount1] = React.useState(1);
+  const [activePage, setactivePage] = React.useState(1);
   const [shownav, setshownav] = React.useState(false);
-
+  const [completedPage, setCompletedPage] = React.useState([]);
   const handleStep = (type) => {
     if (type == 1) {
+      if (!completedPage.includes(stepcount)) {
+        const newArr = [...completedPage];
+        newArr.push(stepcount);
+        setCompletedPage([...newArr]);
+      }
       setstepcount(stepcount + 1);
-      setstepcount1(stepcount1 + 1);
+      setactivePage(activePage + 1);
     } else {
       setstepcount(stepcount - 1);
-      setstepcount1(stepcount1 - 1);
+      setactivePage(activePage - 1);
     }
   };
 
@@ -24,6 +29,12 @@ export default () => {
       history.replace('done');
     }
   });
+  const handlePageChange = (page) => {
+    if (completedPage.includes(page)) {
+      setactivePage(page);
+      setstepcount(page);
+    }
+  };
   return (
     <div className=''>
       <Nav shownav={shownav} setshownav={setshownav} />
@@ -32,9 +43,11 @@ export default () => {
           shownav={shownav}
           setshownav={setshownav}
           stepcount={stepcount}
-          stepcount1={stepcount1}
+          handlePageChange={handlePageChange}
+          activepage={activePage}
+          completedPage={completedPage}
         />
-        <Stepper stepcount={stepcount} handleStep={handleStep} />
+        <Stepper stepcount={activePage} handleStep={handleStep} />
       </div>
     </div>
   );
