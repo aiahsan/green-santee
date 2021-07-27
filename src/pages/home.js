@@ -3,10 +3,10 @@ import Nav from '../components/navbar';
 import SideBar from '../components/sidebar';
 import Stepper from '../components/stepper/steper';
 import { useHistory } from 'react-router-dom';
-export default () => {
+export default ({ isScroll }) => {
   const history = useHistory();
   const [stepcount, setstepcount] = React.useState(1);
-  const [activePage, setactivePage] = React.useState(1);
+  const [activePage, setactivePage] = React.useState(2);
   const [shownav, setshownav] = React.useState(false);
   const [completedPage, setCompletedPage] = React.useState([]);
   const handleStep = (type) => {
@@ -37,8 +37,8 @@ export default () => {
   };
   return (
     <div className=''>
-      <Nav shownav={shownav} setshownav={setshownav} />
-      <div className='d-flex'>
+      <Nav isScroll={isScroll} shownav={shownav} setshownav={setshownav} />
+      <div className={`${isScroll && true ? 'pt-118 ' : ''} d-flex`}>
         <SideBar
           shownav={shownav}
           setshownav={setshownav}
@@ -46,8 +46,11 @@ export default () => {
           handlePageChange={handlePageChange}
           activepage={activePage}
           completedPage={completedPage}
+          isScroll={isScroll}
         />
-        <Stepper stepcount={activePage} handleStep={handleStep} />
+        <div className={`${isScroll && true ? 'stepper-margin' : ''}`}>
+          <Stepper stepcount={activePage} handleStep={handleStep} />
+        </div>
       </div>
     </div>
   );

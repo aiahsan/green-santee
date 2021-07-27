@@ -54,6 +54,7 @@ export default ({
   handlePageChange,
   activepage,
   completedPage,
+  isScroll,
 }) => {
   const [touchStart, setTouchStart] = React.useState(0);
   const [touchEnd, setTouchEnd] = React.useState(0);
@@ -105,7 +106,7 @@ export default ({
             />
           )}
           <div className='nav-btn-flex mb-3 mt-5'>
-            <button className='btn secondry-btn'>Se connecter</button>
+            <button className='btn secondry-btn1'>Se connecter</button>
             <button className='btn primary-btn'>Nous contacter</button>
           </div>
         </div>
@@ -114,7 +115,9 @@ export default ({
   ) : variant && true ? (
     <></>
   ) : (
-    <div className='sidebar sidebar-hide'>
+    <div
+      className={`sidebar sidebar-hide ${isScroll && true ? 'pst-csr' : ''}`}
+    >
       <div>
         <InnerBox
           handlePageChange={handlePageChange}

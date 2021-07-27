@@ -1,10 +1,10 @@
 import React from 'react';
 import Icon from './icons';
 import { useHistory } from 'react-router-dom';
-export default ({ setshownav, variant }) => {
+export default ({ setshownav, variant, isScroll }) => {
   const history = useHistory();
   return (
-    <div className='navcst'>
+    <div className={`navcst ${isScroll && true ? 'navcastp-fixed' : ''}`}>
       <div className='navcst-inner'>
         <div className='d-flex justify-content-between '>
           <div onClick={() => history.push('/')} className='logo'>

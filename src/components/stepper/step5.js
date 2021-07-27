@@ -4,6 +4,8 @@ import Radio from '../radio';
 import Select from '../select';
 import Icon from '../icons';
 import Check from '../checkbox2';
+import { FileDrop } from 'react-file-drop';
+
 export default ({ handleStep }) => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -49,14 +51,23 @@ export default ({ handleStep }) => {
       <h4 className='mt-5 pt-3'>
         Merci de joindre au présent document un Relevé d’Identité Bancaire.
       </h4>
-      <label className='download-btn btn'>
-        <input type='file' className='file-upload-cst' />
+      <FileDrop
+        onFrameDragEnter={(event) => console.log('onFrameDragEnter', event)}
+        onFrameDragLeave={(event) => console.log('onFrameDragLeave', event)}
+        onFrameDrop={(event) => console.log('onFrameDrop', event)}
+        onDragOver={(event) => console.log('onDragOver', event)}
+        onDragLeave={(event) => console.log('onDragLeave', event)}
+        onDrop={(files, event) => console.log('onDrop!', files, event)}
+      >
+        <label className='download-btn btn'>
+          <input type='file' className='file-upload-cst' />
 
-        <p>Faites glisser le fichier XXX ici</p>
-        <p>
-          ou <span>parcourez votre ordinateur </span>
-        </p>
-      </label>
+          <p>Faites glisser le fichier XXX ici</p>
+          <p>
+            ou <span>parcourez votre ordinateur </span>
+          </p>
+        </label>
+      </FileDrop>
       <div className='mt-5 brd-btm'></div>
 
       <div className='mt-4 step-5-item'>
