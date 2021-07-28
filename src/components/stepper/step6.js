@@ -3,6 +3,9 @@ import Icon from '../icons';
 import { useHistory } from 'react-router-dom';
 export default () => {
   const history = useHistory();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='mb-132'>
       <div className='done-inner p-5'>
