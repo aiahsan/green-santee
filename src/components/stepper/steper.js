@@ -4,6 +4,7 @@ import Step2 from './step2';
 import Step3 from './step3';
 import Step4 from './step4';
 import Step5 from './step5';
+import Step6 from './step6';
 export default ({ stepcount, handleStep }) => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,6 +24,9 @@ export default ({ stepcount, handleStep }) => {
     }
     case 5: {
       return <Step5 handleStep={handleStep} />;
+    }
+    case 6: {
+      return <Step6 handleStep={handleStep} />;
     }
 
     default: {

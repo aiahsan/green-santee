@@ -112,7 +112,7 @@ export default ({
         </div>
       </div>
     </div>
-  ) : variant && true ? (
+  ) : activepage == 6 ? (
     <></>
   ) : (
     <div

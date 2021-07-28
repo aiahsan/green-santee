@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 export default ({ isScroll }) => {
   const history = useHistory();
   const [stepcount, setstepcount] = React.useState(1);
-  const [activePage, setactivePage] = React.useState(2);
+  const [activePage, setactivePage] = React.useState(1);
   const [shownav, setshownav] = React.useState(false);
   const [completedPage, setCompletedPage] = React.useState([]);
   const handleStep = (type) => {
@@ -25,9 +25,9 @@ export default ({ isScroll }) => {
   };
 
   React.useEffect(() => {
-    if (stepcount == 6) {
-      history.replace('done');
-    }
+    // if (stepcount == 6) {
+    //   history.replace('done');
+    // }
   });
   const handlePageChange = (page) => {
     if (completedPage.includes(page)) {
@@ -36,7 +36,7 @@ export default ({ isScroll }) => {
     }
   };
   return (
-    <div className=''>
+    <div className={`${activePage == 6 ? 'bg-done' : ''}`}>
       <Nav isScroll={isScroll} shownav={shownav} setshownav={setshownav} />
       <div className={`${isScroll && true ? 'pt-118 ' : ''} d-flex`}>
         <SideBar
@@ -48,7 +48,11 @@ export default ({ isScroll }) => {
           completedPage={completedPage}
           isScroll={isScroll}
         />
-        <div className={`${isScroll && true ? 'stepper-margin' : ''}`}>
+        <div
+          className={`${isScroll && true ? 'stepper-margin' : ''}
+          ${activePage == 6 ? 'm-auto mb-132' : ''}
+          `}
+        >
           <Stepper stepcount={activePage} handleStep={handleStep} />
         </div>
       </div>

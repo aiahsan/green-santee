@@ -432,11 +432,18 @@ img {
   color: #6ca21f !important;
   background-color: white !important;
 }
-
+.bg-done {
+  background-color: #f3f7fa;
+}
 .dropdown-toggle::after {
   border: none !important;
 }
-
+.ml-auto {
+  margin-left: auto;
+}
+.mb-132 {
+  margin-bottom: 140px !important;
+}
 .green-textbox .dropdown button:focus,
 .green-textbox .dropdown button:active {
   box-shadow: none !important;

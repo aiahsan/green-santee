@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import './styles/responsive.css';
 import Home from './pages/home';
-import Done from './pages/done';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 function App() {
   const [isScroll, setisScroll] = React.useState(false);
@@ -21,9 +20,6 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Home isScroll={isScroll} />
-        </Route>
-        <Route exact path='/done'>
-          <Done isScroll={isScroll} />
         </Route>
       </Switch>
     </Router>
